@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Shopping List</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ30J_wax3PJirqcdo6qWZQWgB1QFpd8Os5eQ&usqp=CAU" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./myScriptFile.js"></script>
+</head>
+<body>
+<h1> Your shopping list </h1>
+
+<br/>
+<div class="total">
+<iframe src="https://giphy.com/embed/JTVudzm7Bf0Yx4E3QG" width="480" height="270" frameBorder="0" class="giphy-embed"
+    allowFullScreen></iframe>
+<h3>Your total amount is :</h3> <b><p id="total"> 0 </p> </b>
+</div>
+<br/>
+
+<div class="container" id="parent">
+<!-- Item 1-->
+<div class="item1" id="child1">
+<img src="https://cdnprod.mafretailproxy.com/sys-master-root/h26/h7d/9913197887518/71610_main.jpg_1700Wx1700H" alt="" />
+<p> <b>Price: 3$</b></p>
+<h4>the number of item for this product is:</h4><h4 id="item1" >1</h4>
+<button type="button" class="btn btn-success" onclick="add(va='item1', tt=3)"> Add Item</button>
+<button type="button" class="btn btn-danger" onclick="remove(va1='item1',tt1=3, re='child1')"> Remove Item</button>
+    <i style="font-size:24px" class="fa" id='color1' onclick="color(c='color1')">&#xf004;</i>
+
+</div>
+
+<!--Item 2-->
+
+<div class="item2" id="child2">
+    <img src="https://m.media-amazon.com/images/S/assets.wholefoodsmarket.com/PIE/product/5b34f624e54acd7021de4922_redbellpepper-1.jpg" alt="" />
+    <p> <b>Price: 4$</b></p>
+   <h4>the number of item for this product is:</h4>  <h4 id="item2">1</h4>
+    <button type="button" class="btn btn-success" onclick="add(va='item2',tt=4)"> Add Item</button>
+    <button type="button" class="btn btn-danger" onclick="remove(va1='item2',tt1=4, re='child2')"> Remove Item</button>
+    <i style="font-size:24px" class="fa" id='color2' onclick="color(c='color2')">&#xf004;</i>
+</div>
+
+<!--item3-->
+
+<div class="item3" id="child3">
+    <img src="data:image/jpeg;base64,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"
+        alt="" />
+    <p> <b>Price: 6$</b></p>
+   <h4>the number of item for this product is</h4><h4 id="item3">1</h4>
+    <button type="button" class="btn btn-success" onclick="add(va='item3', tt=6 )">Add Item</button>
+    <button type="button" class="btn btn-danger" onclick="remove(va1='item3',tt1=6,re='child3')"> Remove Item</button>
+    <i style="font-size:24px" class="fa"id="color3" onclick="color(c='color3')">&#xf004;</i>
+</div>
+<!--item4-->
+
+<div class="item4" id="child4">
+    <img src="https://vitamedica.com/wellness-blog/wp-content/uploads/2010/09/Eggplant.jpg"
+        alt="" />
+    <p><b>Price: 9$ </b> </p>
+   <h4>the number of item for this product is</h4> <h4 id="item4">1</h4>
+    <button type="button" class="btn btn-success" onclick="add(va='item3', tt=9 )">Add Item</button>
+    <button type="button" class="btn btn-danger" onclick="remove(va1='item4',tt1=9,re='child4')"> Remove Item</button>
+    <i style="font-size:24px" class="fa" id="color4" onclick="color(c='color4')">&#xf004;</i>
+</div>
+</div>
+
+
+
+
+
+    
+</body>
+</html>

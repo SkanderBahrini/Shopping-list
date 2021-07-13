@@ -1,0 +1,89 @@
+h1 {
+
+    text-align: center;
+    color: black
+}
+p , h3 ,h4 {
+    color:white;
+}
+.item1 > img{
+
+    width:200px;
+    height: 200px;
+   
+}
+.item1 {
+
+    text-align: center;
+}
+.item1 > button {
+
+      display: inline;
+   
+}
+.container {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.item2 > img{
+
+    width:200px;
+    height: 200px;
+   
+}
+.item2 {
+
+    text-align: center;
+}
+.item2 > button {
+
+      display: inline;
+   
+}
+
+.item3 > img{
+
+    width:200px;
+    height: 200px;
+   
+}
+.item3{
+
+    text-align: center;
+}
+.item3 > button {
+
+      display: inline;
+   
+}
+
+.total {
+
+    text-align: center;
+}
+.item4 > img{
+
+    width:200px;
+    height: 200px;
+   
+}
+.item4 {
+
+    text-align: center;
+}
+.item4 > button {
+
+      display: inline;
+   
+}
+
+body {
+
+    background-image: url('https://images.theconversation.com/files/192736/original/file-20171031-18725-120jylc.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop');
+}
+
+
+
+
